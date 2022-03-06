@@ -1,0 +1,24 @@
+.heading {
+}
+
+.heading[data-variant='h1'] {
+  @apply text-[3.5rem] font-bold;
+}
+
+.heading[data-variant='h2'] {
+  @apply text-[2.5rem] font-bold;
+}
+
+.heading[data-variant='h3'] {
+  @apply text-[1.75rem] font-bold;
+}
+
+.heading[data-variant='h4'] {
+  @apply text-[1.0625rem] font-bold;
+}
+
+.heading[data-variant='h5'] {
+}
+
+.heading[data-variant='h6'] {
+}

@@ -1,0 +1,3 @@
+.navigation__item {
+  @apply text-[26px] font-bold text-gray-900 p-4 border-b-[8px] border-black bg-white;
+}

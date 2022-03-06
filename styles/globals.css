@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Nimbus';
+  src: url('/fonts/NimbusSanL-Bol.woff');
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+}
+
+body {
+  font-family: Nimbus;
+}

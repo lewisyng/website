@@ -1,0 +1,15 @@
+.customLink__a {
+    @apply font-bold underline text-lg;
+}
+
+.customLink__a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 5px;
+    bottom: -5px;
+    left: 5px;
+    right: -5px;
+    background: rgb(0, 255, 0);
+    z-index: -1;
+}

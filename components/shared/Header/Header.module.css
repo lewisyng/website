@@ -1,0 +1,15 @@
+.header {
+    @apply flex justify-between border-[8px] border-black;
+}
+
+.header > * {
+    @apply px-10 py-4 border-black;
+}
+
+.header > *:not(:last-child) {
+    @apply border-r-[8px];
+}
+
+.header > *:last-child {
+    @apply border-l-[8px];
+}

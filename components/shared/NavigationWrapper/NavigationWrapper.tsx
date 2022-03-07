@@ -2,14 +2,16 @@ import Navigation from '../Navigation/Navigation'
 
 export const NavigationWrapper = ({
   children,
-  menuOpen
+  menuOpen,
+  closeMenu
 }: {
   children: React.ReactNode
   menuOpen: boolean
+  closeMenu: () => void
 }) => {
   return (
     <>
-      <Navigation open={menuOpen}></Navigation>
+      <Navigation open={menuOpen} closeMenu={closeMenu}></Navigation>
       {children}
     </>
   )

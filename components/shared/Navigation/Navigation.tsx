@@ -1,11 +1,18 @@
-import styles from './Navigation.module.css'
 import cn from 'classnames'
+import NavigationItem from '../NavigationItem/NavigationItem'
+import { navigationItems } from '../../constants'
 
-export const Navigation = ({ open }: { open: boolean }) => {
+export const Navigation = ({
+  open,
+  closeMenu,
+}: {
+  open: boolean
+  closeMenu: () => void
+}) => {
   return (
     <div
       className={cn(
-        'absolute',
+        'fixed',
         'z-10',
         'left-[100%]',
         'top-0',
@@ -19,12 +26,21 @@ export const Navigation = ({ open }: { open: boolean }) => {
         'duration-[500]',
         open && 'translate-x-[-100%]',
         'border-[8px]',
-        'border-black'
+        'border-black',
+        'bg-white'
       )}
     >
-      <div className={styles.navigation__item}>Home</div>
-      <div className={styles.navigation__item}>Über mich</div>
-      <div className={styles.navigation__item}>Kontakt</div>
+      <span onClick={closeMenu} className="cursor-pointer absolute top-0 right-0 z-20 p-3 border-[8px] border-black">
+        CLOSE
+      </span>
+      {Object.entries(navigationItems).map(([key, value]) => (
+        <NavigationItem
+          key={key}
+          label={value.label}
+          href={value.href}
+          handleClick={closeMenu}
+        />
+      ))}
     </div>
   )
 }

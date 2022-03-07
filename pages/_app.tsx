@@ -1,13 +1,30 @@
+import { useEffect, useState } from 'react'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Footer from '../components/shared/Footer/Footer'
+import Header from '../components/shared/Header/Header'
+import PageWrapper from '../components/shared/PageWrapper/PageWrapper'
+import MainWrapper from '../components/shared/MainWrapper/MainWrapper'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const handleMenuClick = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
+
   return (
-    <div className="max-w-[100vw] relative overflow-hidden"> 
-      <Component {...pageProps} />
+    <PageWrapper menuOpen={isMenuOpen} closeMenu={closeMenu}>
+      <Header handleMenuClick={handleMenuClick} />
+      <MainWrapper>
+        <Component {...pageProps} />
+      </MainWrapper>
       <Footer />
-    </div>
+    </PageWrapper>
   )
 }
 

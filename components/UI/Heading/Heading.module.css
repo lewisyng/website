@@ -1,6 +1,10 @@
 .heading {
 }
 
+.heading[data-variant='large'] {
+  @apply text-[6.5rem] font-bold;
+}
+
 .heading[data-variant='h1'] {
   @apply text-[3.5rem] font-bold;
 }

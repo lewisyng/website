@@ -1,14 +1,14 @@
 export const navigationItems = {
     home: {
-        label: 'Home',
+        label: 'HOME',
         href: '/',
       },
       about: {
-        label: 'Über mich',
+        label: 'ÜBER MICH',
         href: '/about',
       },
       contact: {
-        label: 'Kontakt',
+        label: 'KONTAKT',
         href: '/contact',
       },
 }

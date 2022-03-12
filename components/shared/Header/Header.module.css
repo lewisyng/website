@@ -1,15 +1,15 @@
 .header {
-    @apply flex justify-between border-[8px] border-black;
+  @apply flex items-center pt-3 md:pt-0 justify-between px-3 md:border-[8px] md:border-black md:px-0;
 }
 
 .header > * {
-    @apply px-10 py-4 border-black;
+  @apply py-4 md:border-black md:px-10;
 }
 
 .header > *:not(:last-child) {
-    @apply border-r-[8px];
+  @apply md:border-r-[8px];
 }
 
 .header > *:last-child {
-    @apply border-l-[8px];
+  @apply md:border-l-[8px];
 }

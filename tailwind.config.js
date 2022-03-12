@@ -4,16 +4,24 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {
-      spacing: {
-        headerHeight: 'var(--header-height)',
-        footerHeight: 'var(--footer-height)',
-        mainHeight: 'var(--main-height)',
-      },
-      colors: {
-        black: '#090e1a',
-      },
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1440px',
     },
   },
-  plugins: [],
+  extend: {
+    spacing: {
+      headerHeight: 'var(--header-height)',
+      footerHeight: 'var(--footer-height)',
+      mainHeight: 'var(--main-height)',
+    },
+    colors: {
+      black: '#090e1a',
+    },
+  },
+  plugins: [    
+    require('@tailwindcss/typography')
+  ],
 }

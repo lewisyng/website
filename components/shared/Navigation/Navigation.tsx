@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import styles from './Navigation.module.css'
 import NavigationItem from '../NavigationItem/NavigationItem'
 import { navigationItems } from '../../constants'
 
@@ -10,37 +11,55 @@ export const Navigation = ({
   closeMenu: () => void
 }) => {
   return (
-    <div
-      className={cn(
-        'fixed',
-        'z-10',
-        'left-[100%]',
-        'top-0',
-        'h-screen',
-        'w-[40%]',
-        'min-w-[300px]',
-        'max-w-[800px]',
-        'flex-col',
-        'gap-8',
-        'transition-all',
-        'duration-[500]',
-        open && 'translate-x-[-100%]',
-        'border-[8px]',
-        'border-black',
-        'bg-white'
-      )}
-    >
-      <span onClick={closeMenu} className="cursor-pointer absolute top-0 right-0 z-20 p-3 border-[8px] border-black">
-        CLOSE
+    <div className={cn(styles.navigation, open && styles.navigation__open)}>
+      <span
+        onClick={closeMenu}
+        className={cn(
+          styles.navigation__toggle,
+          open
+            ? styles.navigationToggle__open
+            : styles.navigationToggle__closed,
+          'cursor-pointer',
+          'absolute',
+          'z-20'
+        )}
+      >
+        <span
+          className={cn(
+            styles.navigationToggle__lineOne,
+            'h-1',
+            'w-8',
+            'bg-black',
+            'absolute',
+            'block',
+            'top-8',
+            'right-4'
+          )}
+        ></span>
+        <span
+          className={cn(
+            styles.navigationToggle__lineTwo,
+            'h-1',
+            'w-8',
+            'bg-black',
+            'absolute',
+            'block',
+            'top-8',
+            'right-4'
+          )}
+        ></span>
       </span>
-      {Object.entries(navigationItems).map(([key, value]) => (
-        <NavigationItem
-          key={key}
-          label={value.label}
-          href={value.href}
-          handleClick={closeMenu}
-        />
-      ))}
+      <div className="hidden md:block"></div>
+      <div className={cn('my-auto')}>
+        {Object.entries(navigationItems).map(([key, value]) => (
+          <NavigationItem
+            key={key}
+            label={value.label}
+            href={value.href}
+            handleClick={closeMenu}
+          />
+        ))}
+      </div>
     </div>
   )
 }

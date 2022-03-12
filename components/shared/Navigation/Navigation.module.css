@@ -1,3 +1,31 @@
-.navigation__item {
-  @apply text-[26px] font-bold text-gray-900 p-4 border-b-[8px] border-black bg-white;
+.navigation {
+  @apply absolute grid p-12 md:grid-cols-2;
+  gap: 1rem;
+
+  position: fixed;
+  z-index: 10;
+  left: 100%;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  transition: all 300ms ease-in-out;
+  background: white;
+  border: 8px solid black;
+  transition-delay: 200ms;
+}
+
+.navigation__open {
+  transform: translateX(-100%);
+}
+
+.navigation__toggle {
+  right: 0;
+}
+
+.navigationToggle__lineOne {
+  transform: rotate(45deg);
+}
+
+.navigationToggle__lineTwo {
+  transform: rotate(-45deg);
 }

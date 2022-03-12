@@ -1,0 +1,21 @@
+.navigation__item {
+    position: relative;
+}
+
+.navigation__item::before {
+    @apply bg-black;
+    content: '';
+    display: block;
+    background-color: ;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    bottom: -4px;
+    height: 4px;
+    width: 0%;
+    transition: width 150ms ease-in-out;
+}
+
+.navigation__item:hover::before {
+    width: 100%;
+}

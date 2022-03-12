@@ -1,10 +1,10 @@
-import Heading from "../Heading/Heading"
+import Text from "../Text/Text"
 
 export const CardContent = ({children}: {
     children: React.ReactNode
 }) => {
     return (
-        <Heading variant="h4">{children}</Heading>
+        <Text>{children}</Text>
     )
 }
 

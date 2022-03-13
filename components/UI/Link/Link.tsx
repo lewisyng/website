@@ -22,7 +22,7 @@ export const CustomLink = ({
       {as === 'Link' ? (
         <Link href={href}>{children}</Link>
       ) : (
-        <a className={styles.customLink__a} href={href} target={target}>
+        <a className={styles.customLink__a} href={href as string} target={target}>
           {children}
         </a>
       )}

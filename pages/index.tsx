@@ -1,8 +1,10 @@
 import Landing from '../components/Landing/Landing'
 import Projects from '../components/Projects/Projects'
-import useFetchProjects from '../hooks/useFetchProjects'
+import fetchProjects from '../hooks/fetchProjects'
 
-export default function Home({ projects }) {
+export default function Home({ projects }: {
+  projects: any
+}) {
   console.log('projects', projects)
   return (
     <>
@@ -13,7 +15,7 @@ export default function Home({ projects }) {
 }
 
 export const getServerSideProps = async () => {
-  const projects = await useFetchProjects()
+  const projects = await fetchProjects()
 
   return {
     props: {

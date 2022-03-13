@@ -20,6 +20,7 @@ export const About = () => {
             src="/img/portraitTransparent.png"
             layout="fill"
             objectFit="contain"
+            alt=""
           />
         </div>
       </div>

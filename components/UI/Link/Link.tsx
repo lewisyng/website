@@ -1,5 +1,6 @@
 import styles from './Link.module.css'
 import Link from 'next/link'
+import cn from 'classnames'
 
 export const CustomLink = ({
   href,
@@ -7,15 +8,17 @@ export const CustomLink = ({
   type,
   target,
   as,
+  className,
 }: {
   children: React.ReactNode
-  href: string
+  href: string | { pathname: string; query?: any }
   type?: string
   target?: string
   as: 'Link' | 'a'
+  className?: string
 }) => {
   return (
-    <div className="relative">
+    <div className={cn(className, 'relative')}>
       {as === 'Link' ? (
         <Link href={href}>{children}</Link>
       ) : (

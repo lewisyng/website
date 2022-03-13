@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { urlFor } from '../../sanity'
 import Card from '../UI/Card/Card'
 import CardContent from '../UI/Card/CardContent'
 import Heading from '../UI/Heading/Heading'
@@ -6,22 +7,66 @@ import CustomLink from '../UI/Link/Link'
 
 export const Project = ({ project }: { project: any }) => {
   console.log('project', project)
-  return (
-    <div className="border-[8px] border-black px-4 pb-4 sm:p-4 hover:shadow-[10px_10px_0_0_rgb(255,0,255)]">
-      <Card backgroundImage={project.backgroundImg} className="flex">
-        <div className="hidden sm:block relative mr-4 h-[200px] flex-[0_0_150px]">
-          <Image src={project.backgroundImg} layout="fill" objectFit="cover" />
-        </div>
 
-        <div className="flex flex-col justify-between prose">
+  const {
+    _id,
+    title,
+    description,
+    image,
+    links: { github: githubUrl, testing: testingUrl },
+  } = project
+
+  return (
+    <div className="border-[8px] border-black px-4 pb-4 hover:shadow-[10px_10px_0_0_rgb(255,0,255)] sm:p-4">
+      <Card className="flex">
+        {/* IMAGE */}
+        {image && (
+          <div className="relative mr-4 hidden h-[200px] flex-[0_0_150px] sm:block">
+            <Image src={urlFor(image.asset._ref).url()} layout="fill" objectFit="cover" alt="" />
+          </div>
+        )}
+
+        {/* TITLE & DESCRIPTION */}
+        <div className="prose flex flex-col justify-between">
           <div>
-            <Heading variant="h3">{project.name}</Heading>
-            <CardContent>{project.description}</CardContent>
+            {title && <Heading variant="h3">{title}</Heading>}
+
+            {description && <CardContent>{description}</CardContent>}
           </div>
 
+          {/* LINKS */}
           <div className={'flex gap-4'}>
-            <CustomLink as="a" target="_blank" href={project.pageLink} type="primary">Ausprobieren</CustomLink>
-            <CustomLink as="a" target="_blank" href={project.githubLink} type="text">Github</CustomLink>
+            {testingUrl && (
+              <CustomLink
+                as="a"
+                target="_blank"
+                href={testingUrl}
+                type="primary"
+              >
+                Ausprobieren
+              </CustomLink>
+            )}
+
+            {githubUrl && (
+              <CustomLink as="a" target="_blank" href={githubUrl} type="text">
+                Github
+              </CustomLink>
+            )}
+
+            {githubUrl && (
+              <CustomLink
+                className="ml-auto"
+                as="Link"
+                target="_self"
+                href={{
+                  pathname: '/project/[id]',
+                  query: { id: _id },
+                }}
+                type="text"
+              >
+                Details
+              </CustomLink>
+            )}
           </div>
         </div>
 

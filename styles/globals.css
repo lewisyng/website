@@ -3,7 +3,15 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Nimbus';
+  font-family: 'NimbusReg';
+  src: url('/fonts/NimbusSanL-Reg.woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NimbusBold';
   src: url('/fonts/NimbusSanL-Bol.woff');
   font-style: bold;
   font-weight: 700;
@@ -11,7 +19,7 @@
 }
 
 body {
-  font-family: Nimbus;
+  font-family: NimbusBold;
 }
 
 :root {

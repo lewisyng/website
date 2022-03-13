@@ -1,13 +1,25 @@
 import Landing from '../components/Landing/Landing'
 import Projects from '../components/Projects/Projects'
+import fetchProjects from '../hooks/fetchProjects'
 
-export const Home = () => {
+export default function Home({ projects }: {
+  projects: any
+}) {
+  console.log('projects', projects)
   return (
     <>
       <Landing />
-      <Projects />
+      <Projects projects={projects} />
     </>
   )
 }
 
-export default Home
+export const getServerSideProps = async () => {
+  const projects = await fetchProjects()
+
+  return {
+    props: {
+      projects: projects,
+    },
+  }
+}

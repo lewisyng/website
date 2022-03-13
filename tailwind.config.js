@@ -10,6 +10,10 @@ module.exports = {
       lg: '1024px',
       xl: '1440px',
     },
+    fontFamily: {
+      'brutalReg': ['NimbusReg'],
+      'brutalBold': ['NimbusBold']
+    }
   },
   extend: {
     spacing: {

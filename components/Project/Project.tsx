@@ -22,7 +22,12 @@ export const Project = ({ project }: { project: any }) => {
         {/* IMAGE */}
         {image && (
           <div className="relative mr-4 hidden h-[200px] flex-[0_0_150px] sm:block">
-            <Image src={urlFor(image.asset._ref).url()} layout="fill" objectFit="cover" alt="" />
+            <Image
+              src={urlFor(image.asset._ref).url()}
+              layout="fill"
+              objectFit="cover"
+              alt=""
+            />
           </div>
         )}
 

@@ -5,7 +5,7 @@ export const Projects = ({ projects }: {
   projects: any
 }) => {
   return (
-    <div className="mb-20">
+    <div className="min-h-screen">
       <div className="prose max-w-full border-[8px] border-[#0c0c0c] bg-[#0c0c0c] p-4 text-center">
         <Heading className="text-white" variant="h2">
           Meine aktuellen Projekte

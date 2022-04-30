@@ -10,7 +10,7 @@ export const Heading = ({children, className, variant}: {
 }) => {
     const HeadingVariant = variant || "h1";
     return (
-        <HeadingVariant className={cn(className/*, styles.heading*/)} /*data-variant={variant}*/>{children}</HeadingVariant>
+        <HeadingVariant className={cn(className)}>{children}</HeadingVariant>
     )
 }
 

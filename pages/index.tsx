@@ -2,9 +2,7 @@ import Landing from '../components/Landing/Landing'
 import Projects from '../components/Projects/Projects'
 import fetchProjects from '../hooks/fetchProjects'
 
-export default function Home({ projects }: {
-  projects: any
-}) {
+export default function Home({ projects }: { projects: any }) {
   console.log('projects', projects)
   return (
     <>

@@ -12,7 +12,7 @@ export const TechStack = () => {
         </Heading>
       </div>
 
-      <div className="mt-8 grid grid-cols-3 gap-5">
+      <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {Object.values(techStack).map((item, idx: number) => (
           <TechStackCategory key={idx} item={item} />
         ))}

@@ -12,6 +12,7 @@ export const Header = ({
       <div className={styles.logo}>
         <Link href="/">LEWIS YOUNG</Link>
       </div>
+
       <div
         onClick={handleMenuClick}
         className={cn('block', 'md:hidden', 'cursor-pointer')}
@@ -19,6 +20,7 @@ export const Header = ({
         <div className={cn('h-1', 'w-8', 'bg-black')}></div>
         <div className={cn('h-1', 'w-8', 'bg-black', 'mt-1')}></div>
       </div>
+      
       <div
         className="relative hidden cursor-pointer md:block"
         onClick={handleMenuClick}

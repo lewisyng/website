@@ -4,7 +4,7 @@ import Heading from '../UI/Heading/Heading'
 export const Projects = ({ projects }: { projects: any }) => {
   const workProjects = projects
     .filter((project: any) => project.work)
-    .sort((a, b) => a.position - b.position)
+    .sort((a: any, b: any) => a.position - b.position)
   const privateProjects = projects.filter((project: any) => !project.work)
 
   return (
@@ -19,7 +19,7 @@ export const Projects = ({ projects }: { projects: any }) => {
         Arbeit
       </Heading> */}
 
-      <div className="grid gap-4 lg:grid-cols-2 pt-8 pb-4">
+      <div className="grid gap-4 pt-8 pb-4 lg:grid-cols-2">
         {workProjects.map((project: any, idx: number) => (
           <Project project={project} key={idx} />
         ))}

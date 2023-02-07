@@ -7,7 +7,10 @@ export default async function fetchProjects() {
         title,
         description,
         links,
-        image
+        image,
+        work,
+        position,
+        content
     }
   `
 

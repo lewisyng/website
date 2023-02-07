@@ -4,6 +4,12 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'position',
+      title: 'Position',
+      type: 'number',
+      default: 0,
+    },
+    {
       name: 'title',
       title: 'Title',
       type: 'string',
@@ -31,6 +37,11 @@ export default {
       name: 'content',
       title: 'Content',
       type: 'blockContent',
+    },
+    {
+      name: 'work',
+      title: 'Work',
+      type: 'boolean',
     },
   ],
 }

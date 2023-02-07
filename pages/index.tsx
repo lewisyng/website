@@ -7,7 +7,9 @@ export default function Home({ projects }: { projects: any }) {
   return (
     <>
       <Landing />
+
       <Projects projects={projects} />
+
       <TechStack />
     </>
   )

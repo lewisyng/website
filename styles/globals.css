@@ -27,3 +27,7 @@ body {
   --footer-height: 64px;
   --main-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
+
+.prose p {
+  margin: 0.5rem 0 !important;
+}

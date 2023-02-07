@@ -11,9 +11,18 @@ module.exports = {
       xl: '1440px',
     },
     fontFamily: {
-      'brutalReg': ['NimbusReg'],
-      'brutalBold': ['NimbusBold']
-    }
+      brutalReg: ['NimbusReg'],
+      brutalBold: ['NimbusBold'],
+    },
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#000',
+          },
+        },
+      },
+    },
   },
   extend: {
     spacing: {
@@ -25,7 +34,5 @@ module.exports = {
       black: '#090e1a',
     },
   },
-  plugins: [    
-    require('@tailwindcss/typography')
-  ],
+  plugins: [require('@tailwindcss/typography')],
 }

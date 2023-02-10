@@ -5,7 +5,7 @@ import Text from '../UI/Text/Text'
 export const TechStackCategory = ({ item }: { item: any }) => {
   return (
     <div>
-      <div className="my-5 lg:mt-0">
+      <div className="my-5 lg:mt-0 space-y-2">
         <Heading variant="h3" className="text-xl">
           {item.title}
         </Heading>

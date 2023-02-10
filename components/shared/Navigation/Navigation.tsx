@@ -11,44 +11,31 @@ export const Navigation = ({
   closeMenu: () => void
 }) => {
   return (
-    <div className={cn(styles.navigation, open && styles.navigation__open)}>
-      <span
+    <div className={cn(styles.navigation, open && styles["navigation--opne"])}>
+      <button
         onClick={closeMenu}
         className={cn(
           styles.navigation__toggle,
           open
             ? styles.navigationToggle__open
             : styles.navigationToggle__closed,
-          'cursor-pointer',
-          'absolute',
-          'z-20'
+          'absolute z-20 cursor-pointer'
         )}
       >
         <span
           className={cn(
             styles.navigationToggle__lineOne,
-            'h-1',
-            'w-8',
-            'bg-black',
-            'absolute',
-            'block',
-            'top-8',
-            'right-4'
+            'absolute top-8 right-4 block h-1 w-8 bg-black'
           )}
-        ></span>
+        />
         <span
           className={cn(
             styles.navigationToggle__lineTwo,
-            'h-1',
-            'w-8',
-            'bg-black',
-            'absolute',
-            'block',
-            'top-8',
-            'right-4'
+            'absolute top-8 right-4 block h-1 w-8 bg-black'
           )}
-        ></span>
-      </span>
+        />
+      </button>
+
       <div className="hidden md:block"></div>
       <div className={cn('my-auto')}>
         {Object.entries(navigationItems).map(([key, value]) => (

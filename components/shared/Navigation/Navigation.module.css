@@ -14,7 +14,7 @@
   transition-delay: 200ms;
 }
 
-.navigation__open {
+.navigation--open {
   transform: translateX(-100%);
 }
 

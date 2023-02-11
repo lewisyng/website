@@ -1,15 +1,23 @@
 .header {
-  @apply flex items-center pt-3 md:pt-0 justify-between px-3 md:border-[8px] md:border-black md:px-0;
+  display: flex;
+  background: #ffffff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.75rem 0 0.75rem;
+
+  @apply md:border-[8px] md:border-black md:px-0 md:pt-0;
 }
 
 .header > * {
-  @apply py-4 md:border-black md:px-10;
+  padding: 1rem 0;
+
+  /* @apply md:border-black md:px-10; */
 }
 
 .header > *:not(:last-child) {
-  @apply md:border-r-[8px];
+  /* @apply md:border-r-[8px]; */
 }
 
 .header > *:last-child {
-  @apply md:border-l-[8px];
+  /* @apply md:border-l-[8px]; */
 }

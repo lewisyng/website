@@ -1,7 +1,7 @@
-import Landing from '../components/Landing/Landing'
-import Projects from '../components/Projects/Projects'
-import TechStack from '../components/TechStack/TechStack'
-import fetchProjects from '../hooks/fetchProjects'
+import Landing from '../components/Landing/Landing';
+import Projects from '../components/Projects/Projects';
+import TechStack from '../components/TechStack/TechStack';
+import fetchProjects from '../hooks/fetchProjects';
 
 export default function Home({ projects }: { projects: any }) {
   return (
@@ -12,15 +12,15 @@ export default function Home({ projects }: { projects: any }) {
 
       <TechStack />
     </>
-  )
+  );
 }
 
 export const getServerSideProps = async () => {
-  const projects = await fetchProjects()
+  const projects = await fetchProjects();
 
   return {
     props: {
       projects: projects,
     },
-  }
-}
+  };
+};

@@ -1,12 +1,15 @@
-import { PortableText } from '@portabletext/react'
-import Image from 'next/image'
-import { urlFor } from '../../sanity'
-import Card from '../UI/Card/Card'
-import Heading from '../UI/Heading/Heading'
-import CustomLink from '../UI/Link/Link'
-import Text from '../UI/Text/Text'
+import { PortableText } from '@portabletext/react';
+import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
+import { urlFor } from '../../sanity';
+import Card from '../UI/Card/Card';
+import Heading from '../UI/Heading/Heading';
+import CustomLink from '../UI/Link/Link';
+import Text from '../UI/Text/Text';
 
 export const Project = ({ project }: { project: any }) => {
+  const { t } = useTranslation();
+
   const {
     _id,
     title,
@@ -14,7 +17,7 @@ export const Project = ({ project }: { project: any }) => {
     content,
     image,
     links: { github: githubUrl, testing: testingUrl },
-  } = project
+  } = project;
 
   return (
     <div className="border-[8px] border-black px-4 pb-4 hover:shadow-[10px_10px_0_0_rgb(255,0,255)] sm:p-4">
@@ -24,10 +27,9 @@ export const Project = ({ project }: { project: any }) => {
           <div className="relative mr-4 hidden h-[150px] flex-[0_0_150px] sm:block">
             <Image
               src={urlFor(image.asset._ref).url()}
-              layout="fill"
-              objectFit="cover"
+              fill
               alt=""
-              className="!h-auto !min-h-0"
+              className="!h-auto !min-h-0 object-cover"
             />
           </div>
         )}
@@ -56,13 +58,13 @@ export const Project = ({ project }: { project: any }) => {
                   href={testingUrl}
                   type="primary"
                 >
-                  Anschauen
+                  {t('general.takeALook')}
                 </CustomLink>
               )}
 
               {githubUrl && (
                 <CustomLink as="a" target="_blank" href={githubUrl} type="text">
-                  Github
+                  {t('general.github')}
                 </CustomLink>
               )}
 
@@ -77,7 +79,7 @@ export const Project = ({ project }: { project: any }) => {
                   }}
                   type="text"
                 >
-                  Details
+                  {t('general.details')}
                 </CustomLink>
               )}
             </div>
@@ -85,7 +87,7 @@ export const Project = ({ project }: { project: any }) => {
         </div>
       </Card>
     </div>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

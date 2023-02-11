@@ -1,5 +1,6 @@
-import Image from 'next/image'
-import Heading from '../components/UI/Heading/Heading'
+import { t } from 'i18next';
+import Image from 'next/image';
+import Heading from '../components/UI/Heading/Heading';
 
 export const About = () => {
   return (
@@ -7,15 +8,11 @@ export const About = () => {
       <div className="relative grid h-[calc(100vh-72px)] md:grid-cols-2">
         <div className="relative top-[50%] flex flex-col gap-4">
           <Heading variant="h3" className="text-4xl">
-            Mich fasziniert alles{' '}
-            <span className="text-[#E7A44C]">Fassbare</span> an einer Website
-            und das <span className="text-[#E7A44C]">Unfassbare</span>, das
-            dahinter steckt.
+            {t('about.header')}
           </Heading>
 
           <Heading variant="h3" className="max-w-[60ch] text-base md:text-lg">
-            Ich liebe es neue Technologien zu lernen und damit selber auf die
-            Digitalisierung Einfluss zu nehmen.
+            {t('about.subHeader')}
           </Heading>
         </div>
 
@@ -53,7 +50,7 @@ export const About = () => {
         </div>
       </div> */}
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

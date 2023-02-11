@@ -1,15 +1,15 @@
-import styles from './NavigationItem.module.css'
-import Link from 'next/link'
-import cn from 'classnames'
+import styles from './NavigationItem.module.css';
+import Link from 'next/link';
+import cn from 'classnames';
 
 export const NavigationItem = ({
   label,
   href,
   handleClick,
 }: {
-  label: string
-  href: string
-  handleClick: () => void
+  label: string;
+  href: string;
+  handleClick: () => void;
 }) => {
   return (
     <div
@@ -23,12 +23,12 @@ export const NavigationItem = ({
         'text-gray-900',
         'md:text-left',
         'md:text-[36px]',
-        'md:table',
+        'md:table'
       )}
     >
       <Link href={href}>{label}</Link>
     </div>
-  )
-}
+  );
+};
 
-export default NavigationItem
+export default NavigationItem;

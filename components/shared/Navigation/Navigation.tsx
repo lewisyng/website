@@ -1,17 +1,34 @@
-import cn from 'classnames'
-import styles from './Navigation.module.css'
-import NavigationItem from '../NavigationItem/NavigationItem'
-import { navigationItems } from '../../constants'
+import cn from 'classnames';
+import styles from './Navigation.module.css';
+import NavigationItem from '../NavigationItem/NavigationItem';
+import { useTranslation } from 'react-i18next';
 
 export const Navigation = ({
   open,
   closeMenu,
 }: {
-  open: boolean
-  closeMenu: () => void
+  open: boolean;
+  closeMenu: () => void;
 }) => {
+  const { t } = useTranslation();
+
+  const navigationItems = {
+    home: {
+      label: t('general.home'),
+      href: '/',
+    },
+    about: {
+      label: t('general.aboutMe'),
+      href: '/about',
+    },
+    contact: {
+      label: t('general.contact'),
+      href: '/contact',
+    },
+  };
+
   return (
-    <div className={cn(styles.navigation, open && styles["navigation--opne"])}>
+    <div className={cn(styles.navigation, open && styles['navigation--open'])}>
       <button
         onClick={closeMenu}
         className={cn(
@@ -48,7 +65,7 @@ export const Navigation = ({
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

@@ -1,13 +1,16 @@
-import { techStack } from '../constants'
-import TechStackCategory from '../TechStackCategory/TechStackCategory'
-import Heading from '../UI/Heading/Heading'
+import { useTranslation } from 'react-i18next';
+import { techStack } from '../constants';
+import TechStackCategory from '../TechStackCategory/TechStackCategory';
+import Heading from '../UI/Heading/Heading';
 
 export const TechStack = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="py-12">
       <div className="prose max-w-full border-[8px] border-[#0c0c0c] bg-[#0c0c0c] p-4 text-center">
         <Heading className="text-white" variant="h2">
-          Mein Tech Stack
+          {t('techStack.title')}
         </Heading>
       </div>
 
@@ -17,7 +20,7 @@ export const TechStack = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TechStack
+export default TechStack;

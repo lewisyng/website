@@ -1,17 +1,19 @@
-import Project from '../Project/Project'
-import Heading from '../UI/Heading/Heading'
+import { useTranslation } from 'react-i18next';
+import Project from '../Project/Project';
+import Heading from '../UI/Heading/Heading';
 
 export const Projects = ({ projects }: { projects: any }) => {
+  const { t } = useTranslation();
   const workProjects = projects
     .filter((project: any) => project.work)
-    .sort((a: any, b: any) => a.position - b.position)
-  const privateProjects = projects.filter((project: any) => !project.work)
+    .sort((a: any, b: any) => a.position - b.position);
+  const privateProjects = projects.filter((project: any) => !project.work);
 
   return (
     <div className="py-4">
       <div className="prose max-w-full border-[8px] border-[#0c0c0c] bg-[#0c0c0c] p-4 text-center">
         <Heading className="text-white" variant="h2">
-          Meine aktuellen Projekte
+          {t('project.header.title')}
         </Heading>
       </div>
 
@@ -35,7 +37,7 @@ export const Projects = ({ projects }: { projects: any }) => {
         ))}
       </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

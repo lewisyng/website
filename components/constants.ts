@@ -1,18 +1,3 @@
-export const navigationItems = {
-  home: {
-    label: 'HOME',
-    href: '/',
-  },
-  about: {
-    label: 'ÜBER MICH',
-    href: '/about',
-  },
-  contact: {
-    label: 'KONTAKT',
-    href: '/contact',
-  },
-}
-
 export const techStack: Record<
   string,
   { title: string; subTitle?: string; technologies: string[] }
@@ -41,4 +26,4 @@ export const techStack: Record<
       'Headless CMS interessieren mich sehr, weil sie einen großen Teil des Backends übernehmen und Content einfach verfügbar machen.',
     technologies: ['MagnoliaCMS', 'Contentful', 'Sanity'],
   },
-}
+};

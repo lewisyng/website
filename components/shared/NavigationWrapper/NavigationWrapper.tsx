@@ -1,20 +1,20 @@
-import Navigation from '../Navigation/Navigation'
+import Navigation from '../Navigation/Navigation';
 
 export const NavigationWrapper = ({
   children,
   menuOpen,
-  closeMenu
+  closeMenu,
 }: {
-  children: React.ReactNode
-  menuOpen: boolean
-  closeMenu: () => void
+  children: React.ReactNode;
+  menuOpen: boolean;
+  closeMenu: () => void;
 }) => {
   return (
     <>
-      <Navigation open={menuOpen} closeMenu={closeMenu}></Navigation>
+      <Navigation open={menuOpen} closeMenu={closeMenu} />
       {children}
     </>
-  )
-}
+  );
+};
 
-export default NavigationWrapper
+export default NavigationWrapper;

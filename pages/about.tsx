@@ -1,8 +1,10 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import Heading from '../components/UI/Heading/Heading';
 
 export const About = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="relative grid h-[calc(100vh-72px)] md:grid-cols-2">

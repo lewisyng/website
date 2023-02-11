@@ -3,14 +3,11 @@
   background: #ffffff;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 0.75rem 0 0.75rem;
 
   @apply md:border-[8px] md:border-black md:px-0 md:pt-0;
 }
 
 .header > * {
-  padding: 1rem 0;
-
   /* @apply md:border-black md:px-10; */
 }
 
@@ -20,4 +17,25 @@
 
 .header > *:last-child {
   /* @apply md:border-l-[8px]; */
+}
+
+.logo {
+  position: relative;
+  isolation: isolate;
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #ff0;
+  transition: all 300ms ease;
+}
+
+.logo:hover::before {
+  width: 100%;
 }

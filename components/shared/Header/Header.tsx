@@ -2,21 +2,22 @@ import styles from './Header.module.css';
 import cn from 'classnames';
 import Link from 'next/link';
 import { LanguageSwitcher } from '../../LanguageSwitcher/LanguageSwitcher';
-import { t } from 'i18next';
-import clsx from 'clsx';
+import { useTranslation } from 'react-i18next';
 
 export const Header = ({
   handleMenuClick,
 }: {
   handleMenuClick: () => void;
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.header}>
-      <div className={clsx(styles.logo, 'border-r-8 border-black !px-8')}>
-        <Link href="/">LEWIS YOUNG</Link>
-      </div>
+      <Link href="/" className="border-r-8 border-black">
+        <div className={cn(styles.logo, '!px-8 !py-4')}>LEWIS YOUNG</div>
+      </Link>
 
-      <div className="ml-auto border-l-8 border-black !px-4">
+      <div className="ml-auto border-l-8 border-black !p-4">
         <LanguageSwitcher />
       </div>
 
@@ -29,7 +30,7 @@ export const Header = ({
       </div>
 
       <button
-        className="relative hidden cursor-pointer border-l-8 border-black !px-8 uppercase md:block"
+        className="relative hidden cursor-pointer border-l-8 border-black !px-8 !py-4 uppercase md:block"
         onClick={handleMenuClick}
       >
         {t('general.menu')}

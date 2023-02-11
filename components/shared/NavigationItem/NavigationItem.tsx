@@ -11,6 +11,7 @@ export const NavigationItem = ({
   href: string;
   handleClick: () => void;
 }) => {
+  console.log('label', label);
   return (
     <div
       onClick={handleClick}

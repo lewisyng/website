@@ -6,11 +6,11 @@ import fetchProjects from '../hooks/fetchProjects';
 export default function Home({ projects }: { projects: any }) {
   return (
     <>
-      <Landing />
+      {/* <Landing /> */}
 
-      <Projects projects={projects} />
+      {/* <Projects projects={projects} /> */}
 
-      <TechStack />
+      {/* <TechStack /> */}
     </>
   );
 }

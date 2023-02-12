@@ -8,13 +8,18 @@ import CustomLink from '../UI/Link/Link';
 import Text from '../UI/Text/Text';
 
 export const Project = ({ project }: { project: any }) => {
-  const { t } = useTranslation();
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
 
   const {
     _id,
     title,
     description,
+    description_en,
     content,
+    content_en,
     image,
     links: { github: githubUrl, testing: testingUrl },
   } = project;
@@ -24,7 +29,7 @@ export const Project = ({ project }: { project: any }) => {
       <Card className="flex h-full">
         {/* IMAGE */}
         {image && (
-          <div className="relative mr-4 hidden h-[150px] flex-[0_0_150px] sm:block">
+          <div className="relative mr-4 hidden h-[150px] flex-[0_0_150px] sm:block md:mt-8">
             <Image
               src={urlFor(image.asset._ref).url()}
               fill
@@ -38,14 +43,20 @@ export const Project = ({ project }: { project: any }) => {
         <div className="prose flex grow flex-col">
           <div className="grow">
             {title && (
-              <Heading variant="h3" className="text-2xl">
+              <Heading variant="h3" className="mb-0 text-2xl">
                 {title}
               </Heading>
             )}
 
-            {description && <Text className="text-sm">{description}</Text>}
+            {description && (
+              <Text className="text-sm">
+                {language === 'en' ? description_en : description}
+              </Text>
+            )}
 
-            {content && <PortableText value={content} />}
+            {content && (
+              <PortableText value={language === 'en' ? content_en : content} />
+            )}
           </div>
 
           {/* LINKS */}

@@ -2,6 +2,7 @@ import cn from 'classnames';
 import styles from './Navigation.module.css';
 import NavigationItem from '../NavigationItem/NavigationItem';
 import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from '../../LanguageSwitcher/LanguageSwitcher';
 
 export const Navigation = ({
   open,
@@ -36,21 +37,10 @@ export const Navigation = ({
           open
             ? styles.navigationToggle__open
             : styles.navigationToggle__closed,
-          'absolute z-20 cursor-pointer'
+          'absolute top-4 right-4 z-20 cursor-pointer'
         )}
       >
-        <span
-          className={cn(
-            styles.navigationToggle__lineOne,
-            'absolute top-8 right-4 block h-1 w-8 bg-black'
-          )}
-        />
-        <span
-          className={cn(
-            styles.navigationToggle__lineTwo,
-            'absolute top-8 right-4 block h-1 w-8 bg-black'
-          )}
-        />
+        <img src="/img/icons/close.svg" alt="" width={40} />
       </button>
 
       <div className="hidden md:block"></div>
@@ -63,6 +53,10 @@ export const Navigation = ({
             handleClick={closeMenu}
           />
         ))}
+
+        <div className="flex justify-end border-t border-dashed border-black pt-4 md:hidden">
+          <LanguageSwitcher />
+        </div>
       </div>
     </div>
   );

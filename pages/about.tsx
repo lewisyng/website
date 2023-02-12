@@ -7,7 +7,7 @@ export const About = () => {
 
   return (
     <>
-      <div className="relative grid h-[calc(100vh-72px)] md:grid-cols-2">
+      <div className="relative grid h-[calc(100vh-56px)] md:grid-cols-2">
         <div className="relative top-[50%] flex flex-col gap-4">
           <Heading variant="h3" className="text-4xl">
             {t('about.header')}
@@ -18,7 +18,7 @@ export const About = () => {
           </Heading>
         </div>
 
-        <div className="relative hidden h-[80%] justify-end self-end md:block">
+        <div className="dhidden absolute bottom-0 z-[-1] h-[80%] w-[570px] justify-end self-end opacity-30 md:relative md:block">
           <Image
             src="/img/portraitTransparent.png"
             layout="fill"

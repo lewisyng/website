@@ -3,7 +3,7 @@
   gap: 1rem;
 
   position: fixed;
-  z-index: 10;
+  z-index: 1001;
   left: 100%;
   top: 0;
   height: 100vh;
@@ -18,16 +18,4 @@
 .navigation--open {
   left: 0;
   opacity: 1;
-}
-
-.navigation__toggle {
-  right: 0;
-}
-
-.navigationToggle__lineOne {
-  transform: rotate(45deg);
-}
-
-.navigationToggle__lineTwo {
-  transform: rotate(-45deg);
 }

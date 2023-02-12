@@ -20,6 +20,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'description_en',
+      title: 'Description English',
+      type: 'string',
+    },
+    {
       name: 'image',
       title: 'Image',
       type: 'image',
@@ -39,9 +44,14 @@ export default {
       type: 'blockContent',
     },
     {
+      name: 'content_en',
+      title: 'Content English',
+      type: 'blockContent',
+    },
+    {
       name: 'work',
       title: 'Work',
       type: 'boolean',
     },
   ],
-}
+};

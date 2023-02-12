@@ -31,7 +31,7 @@ module.exports = {
       mainHeight: 'var(--main-height)',
     },
     colors: {
-      black: '#090e1a',
+      black: 'var(--color-black)',
     },
   },
   plugins: [require('@tailwindcss/typography')],

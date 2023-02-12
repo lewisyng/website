@@ -13,11 +13,11 @@ export const Header = ({
 
   return (
     <div className={styles.header}>
-      <Link href="/" className="border-r-8 border-black">
-        <div className={cn(styles.logo, '!px-8 !py-4')}>LEWIS YOUNG</div>
+      <Link href="/" className="md:border-r-8 md:border-black">
+        <div className={cn(styles.logo, 'md:!py-4 md:!px-8')}>LEWIS YOUNG</div>
       </Link>
 
-      <div className="ml-auto border-l-8 border-black !p-4">
+      <div className="ml-auto hidden border-black !p-4 md:block md:border-l-8">
         <LanguageSwitcher />
       </div>
 

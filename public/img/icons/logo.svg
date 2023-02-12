@@ -1,0 +1,18 @@
+<svg height="100%" stroke-miterlimit="10"
+    style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1"
+    viewBox="0 0 14.1183 10.3477" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs />
+    <clipPath id="ArtboardFrame">
+        <rect height="10.3477" width="14.1183" x="0" y="0" />
+    </clipPath>
+    <g clip-path="url(#ArtboardFrame)" id="Ebene-1">
+        <g opacity="1">
+            <path d="M0 0L2.16302 0L2.16302 8.49056L7.28966 8.49056L7.28966 10.3516L0 10.3516L0 0Z" fill="#f1d244"
+                fill-rule="nonzero" opacity="1" stroke="none" />
+            <path
+                d="M14.1305-2.07192e-16L10.6683 6.46097L10.6683 10.3516L8.50525 10.3516L8.50525 6.46097L4.92362-2.07192e-16L7.4729-2.07192e-16L9.62187 4.50863L11.6796-2.07192e-16L14.1305-2.07192e-16Z"
+                fill="#f1d244" fill-rule="nonzero" opacity="1" stroke="none" />
+        </g>
+    </g>
+</svg>

@@ -15,7 +15,7 @@ export const Landing = () => {
         </Heading>
 
         <Heading
-          variant="h3"
+          variant="h2"
           className="prose mb-14 text-base text-black md:mx-auto md:mt-10 md:text-2xl md:leading-9"
         >
           {t('hero.subHeader')}

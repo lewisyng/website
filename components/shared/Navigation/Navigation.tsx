@@ -39,6 +39,7 @@ export const Navigation = ({
             : styles.navigationToggle__closed,
           'absolute top-4 right-4 z-20 cursor-pointer'
         )}
+        aria-label="Menü öffnen"
       >
         <img src="/img/icons/close.svg" alt="" width={40} />
       </button>

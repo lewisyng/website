@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next';
-import Image from 'next/image';
-import Heading from '../components/UI/Heading/Heading';
-import { Head } from 'next/document';
+import { useTranslation } from "react-i18next";
+import Image from "next/image";
+import Heading from "../components/UI/Heading/Heading";
+import Head from "next/head";
 
 export const About = () => {
   const { t } = useTranslation();
@@ -15,11 +15,11 @@ export const About = () => {
       <div className="relative grid h-[calc(100vh-56px)] md:grid-cols-2">
         <div className="relative top-[50%] flex flex-col gap-4">
           <Heading variant="h3" className="text-4xl">
-            {t('about.header')}
+            {t("about.header")}
           </Heading>
 
           <Heading variant="h3" className="max-w-[60ch] text-base md:text-lg">
-            {t('about.subHeader')}
+            {t("about.subHeader")}
           </Heading>
         </div>
 

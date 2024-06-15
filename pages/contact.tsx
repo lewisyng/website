@@ -1,6 +1,6 @@
-import { useTranslation } from 'next-i18next';
-import Head from 'next/head';
-import Heading from '../components/UI/Heading/Heading';
+import { useTranslation } from "next-i18next";
+import Head from "next/head";
+import Heading from "../components/UI/Heading/Heading";
 
 export const Contact = () => {
   const { t } = useTranslation();
@@ -10,20 +10,21 @@ export const Contact = () => {
       <Head>
         <title>Lewis Young - Kontakt</title>
       </Head>
-      
-      <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex-col items-center justify-center">
-        {/* <Heading variant="h1">Kontakt</Heading> */}
 
+      <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex-col items-center justify-center">
         <div className="text-center">
           <Heading variant="h3">Lewis Young</Heading>
+
           <Heading variant="h4">
-            {t('contact.city')} | {t('contact.country')}
+            {t("contact.city")} | {t("contact.country")}
           </Heading>
+
           <Heading variant="h4">
             <a href="mailto:lewisy13@gmail.com" className="underline">
               lewisy13(at)gmail.com
             </a>
           </Heading>
+
           <Heading variant="h4">
             <a
               href="https://www.linkedin.com/in/lewis-young-276603164/"

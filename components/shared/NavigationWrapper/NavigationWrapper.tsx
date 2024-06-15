@@ -1,4 +1,4 @@
-import Navigation from '../Navigation/Navigation';
+import Navigation from "../Navigation/Navigation";
 
 export const NavigationWrapper = ({
   children,
@@ -12,6 +12,7 @@ export const NavigationWrapper = ({
   return (
     <>
       <Navigation open={menuOpen} closeMenu={closeMenu} />
+
       {children}
     </>
   );

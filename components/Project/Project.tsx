@@ -1,11 +1,11 @@
-import { PortableText } from '@portabletext/react';
-import Image from 'next/image';
-import { useTranslation } from 'react-i18next';
-import { urlFor } from '../../sanity';
-import Card from '../UI/Card/Card';
-import Heading from '../UI/Heading/Heading';
-import CustomLink from '../UI/Link/Link';
-import Text from '../UI/Text/Text';
+import { PortableText } from "@portabletext/react";
+import Image from "next/image";
+import { useTranslation } from "react-i18next";
+import { urlFor } from "../../sanity";
+import Card from "../UI/Card/Card";
+import Heading from "../UI/Heading/Heading";
+import CustomLink from "../UI/Link/Link";
+import Text from "../UI/Text/Text";
 
 export const Project = ({ project }: { project: any }) => {
   const {
@@ -25,7 +25,7 @@ export const Project = ({ project }: { project: any }) => {
   } = project;
 
   return (
-    <div className="border-[8px] border-black px-4 pb-4 hover:shadow-[10px_10px_0_0_rgb(255,0,255)] sm:p-4">
+    <div className="bg-white px-4 py-4">
       <Card className="flex h-full">
         {/* IMAGE */}
         {image && (
@@ -50,18 +50,18 @@ export const Project = ({ project }: { project: any }) => {
 
             {description && (
               <Text className="text-sm">
-                {language === 'en' ? description_en : description}
+                {language === "en" ? description_en : description}
               </Text>
             )}
 
             {content && (
-              <PortableText value={language === 'en' ? content_en : content} />
+              <PortableText value={language === "en" ? content_en : content} />
             )}
           </div>
 
           {/* LINKS */}
           <div>
-            <div className={'flex gap-4'}>
+            <div className={"flex gap-4"}>
               {testingUrl && (
                 <CustomLink
                   as="a"
@@ -69,13 +69,13 @@ export const Project = ({ project }: { project: any }) => {
                   href={testingUrl}
                   type="primary"
                 >
-                  {t('general.takeALook')}
+                  {t("general.takeALook")}
                 </CustomLink>
               )}
 
               {githubUrl && (
                 <CustomLink as="a" target="_blank" href={githubUrl} type="text">
-                  {t('general.github')}
+                  {t("general.github")}
                 </CustomLink>
               )}
 
@@ -85,12 +85,12 @@ export const Project = ({ project }: { project: any }) => {
                   as="Link"
                   target="_self"
                   href={{
-                    pathname: '/project/[id]',
+                    pathname: "/project/[id]",
                     query: { id: _id },
                   }}
                   type="text"
                 >
-                  {t('general.details')}
+                  {t("general.details")}
                 </CustomLink>
               )}
             </div>

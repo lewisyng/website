@@ -1,24 +1,24 @@
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1440px',
+      sm: "480px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1440px",
     },
     fontFamily: {
-      brutalReg: ['NimbusReg'],
-      brutalBold: ['NimbusBold'],
+      brutalReg: ["NimbusReg"],
+      brutalBold: ["NimbusBold"],
     },
     extend: {
       typography: {
         DEFAULT: {
           css: {
-            color: '#000',
+            color: "#000",
           },
         },
       },
@@ -26,13 +26,13 @@ module.exports = {
   },
   extend: {
     spacing: {
-      headerHeight: 'var(--header-height)',
-      footerHeight: 'var(--footer-height)',
-      mainHeight: 'var(--main-height)',
+      headerHeight: "var(--header-height)",
+      footerHeight: "var(--footer-height)",
+      mainHeight: "var(--main-height)",
     },
     colors: {
-      black: 'var(--color-black)',
+      black: "var(--color-black)",
     },
   },
-  plugins: [require('@tailwindcss/typography')],
-}
+  plugins: [require("@tailwindcss/typography")],
+};

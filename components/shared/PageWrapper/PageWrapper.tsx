@@ -12,7 +12,8 @@ export const PageWrapper = ({
 }) => (
   <div className="relative min-h-screen max-w-[100vw] overflow-hidden">
     <NavigationWrapper menuOpen={menuOpen} closeMenu={closeMenu}>
-      <div className="container mx-auto grid min-h-screen">{children}</div>
+      {/* <div className="container mx-auto grid min-h-screen">{children}</div> */}
+      {children}
     </NavigationWrapper>
   </div>
 );
